@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/anagram"
+
+arg = ARGV
+sample = Anagram.new(arg[0],arg[1])
+puts sample.is_anagram
