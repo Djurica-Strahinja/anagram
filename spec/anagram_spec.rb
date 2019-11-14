@@ -9,13 +9,6 @@ describe Anagram do
       end
     end
 
-    context "run with number as argument" do
-      it "returns error massage" do
-        sample = Anagram.new(1,"abc")
-        expect(sample.is_anagram).to eql("Numbers are not allowed")
-      end
-    end
-
     context "run with punctations" do
       it "ignore punctations while comparing" do
         sample = Anagram.new("abc!;'#]'","abc")
