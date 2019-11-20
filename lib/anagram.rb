@@ -10,7 +10,7 @@ class Anagram
           sen_1_char += char
         end
       end
-      (sentence1.downcase).each_char do |char|
+      (sentence2.downcase).each_char do |char|
         if ("a".."z").include? char and char != " "
           sen_2_char += char
         end
@@ -23,3 +23,5 @@ class Anagram
     end
   end
 end
+sample = Anagram.new
+puts sample.is_anagram("jajaj", "jaja")
