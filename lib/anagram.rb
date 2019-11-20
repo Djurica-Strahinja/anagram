@@ -5,12 +5,12 @@ class Anagram
     else
       sen_1_char = ""
       sen_2_char = ""
-      sentence1.each_char do |char|
+      (sentence1.downcase).each_char do |char|
         if ("a".."z").include? char and char !=" "
           sen_1_char += char
         end
       end
-      sentence2.each_char do |char|
+      (sentence1.downcase).each_char do |char|
         if ("a".."z").include? char and char != " "
           sen_2_char += char
         end
