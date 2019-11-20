@@ -4,4 +4,4 @@ require_relative "../lib/anagram"
 
 arg = ARGV
 sample = Anagram.new
-puts sample.is_anagram(arg[0],arg[1])
+sample.is_anagram(arg[0],arg[1])
