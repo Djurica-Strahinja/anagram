@@ -2,38 +2,38 @@ require "anagram"
 
 describe Anagram do
   describe ".is_anagram" do
-    context "run with empty string as argument" do
+    context "with empty string as argument" do
       it "returns error massage" do
-        sample = Anagram.new("","abc")
-        expect(sample.is_anagram).to eql("One or two arguments are empty, please write 2 sentences!")
+        sample = Anagram.new
+        expect(sample.is_anagram("","abc")).to eql("One or two arguments are empty, please write 2 sentences!")
       end
     end
 
-    context "run with punctations" do
+    context "with punctations" do
       it "ignore punctations while comparing" do
-        sample = Anagram.new("abc!;'#]'","abc")
-        expect(sample.is_anagram).to eql(true)
+        sample = Anagram.new
+        expect(sample.is_anagram("abc!;'#]'","abc")).to eql(true)
       end
     end
 
-    context "run with spaces" do
+    context "with spaces" do
       it "ignore spaces while comparing" do
-        sample = Anagram.new("a b c","abc")
-        expect(sample.is_anagram).to eql(true)
+        sample = Anagram.new
+        expect(sample.is_anagram("a b c","abc")).to eql(true)
       end
     end
 
-    context "run with capital letters" do
+    context "with capital letters" do
       it "case insensitive while comparing" do
-        sample = Anagram.new("ABC","abc")
-        expect(sample.is_anagram).to eql(true)
+        sample = Anagram.new
+        expect(sample.is_anagram("ABC","abc")).to eql(true)
       end
     end
 
-    context "run with mixed characters" do
+    context "with mixed characters" do
       it "returns true" do
-        sample = Anagram.new("asdfg","gfdsa")
-        expect(sample.is_anagram).to eql(true)
+        sample = Anagram.new
+        expect(sample.is_anagram("asdfg","gfdsa")).to eql(true)
       end
     end
   end
